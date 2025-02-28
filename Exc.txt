@@ -1,0 +1,388 @@
+1.
+
+import	java.util.*;
+
+public class Exc1 {
+    public static void main(String[] args) {
+        Scanner numeros = new Scanner(System.in);
+        System.out.println("Escolha o primeiro número");
+        int a = numeros.nextInt();
+        System.out.println("Escolha o segundo número");
+        int b = numeros.nextInt();
+
+        System.out.println(a/b);
+        System.out.println(a*b);
+        System.out.println(a-b);
+        System.out.println(a+b);
+        
+    }
+}
+
+2.
+
+import	java.util.*;
+
+public class Exc2 {
+    public static void main(String[] args) {
+        Scanner numeros = new Scanner(System.in);
+        System.out.println("Escolha o primeiro número");
+        float a = numeros.nextFloat();
+        System.out.println("Escolha o segundo número");
+        float b = numeros.nextFloat();
+
+        System.out.println(a/b);
+        System.out.println(a*b);
+        System.out.println(a-b);
+        System.out.println(a+b);
+        
+    }
+}
+
+3.
+
+import	java.util.*;
+
+public class Exc3 {
+    public static void main(String[] args) {
+        Scanner numeros = new Scanner(System.in);
+        System.out.println("Informe o salário");
+        float salario = numeros.nextInt();
+        System.out.println("Informe o percentual de aumento");
+        float aumento = numeros.nextFloat();
+
+        salario = salario * (1+aumento/100);
+        System.out.println(salario);
+
+        
+    }
+}
+
+4.
+
+import	java.util.*;
+
+public class Exc4 {
+    public static void main(String[] args) {
+        Scanner numeros = new Scanner(System.in);
+        System.out.println("Informe o raio:");
+        int raio = numeros.nextInt();
+        float perimetro, area;
+        float pi;
+
+        pi = (float) 3.14;
+
+        perimetro = 2 * pi * raio;
+        area = pi * (raio * raio);
+
+
+        System.out.println("O perimetro é: " + perimetro);
+        System.out.println("A area é: " + area);
+
+        
+    }
+}
+
+5.
+
+import java.util.*;
+
+public class Exc5 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int t;
+        float restoSeg,restoMin, restoHora;
+
+        System.out.println("Informe os segundos");
+        t = teclado.nextInt();
+        restoSeg = t%60;
+        restoMin = (t%3600) / 60;
+        restoHora = (t/3600);
+
+        System.out.print("Horas = " + restoHora);
+        System.out.print("; Minutos = " + restoMin);
+        System.out.print("; Segundos = " + restoSeg);
+    }
+}
+
+6.
+
+import java.util.*;
+
+public class Exc6 {
+    public static void main(String[] args) {
+        Scanner carro = new Scanner(System.in);
+        System.out.println("Informe a distância");
+        int distancia = carro.nextInt();
+        System.out.println("Informe o tempo");
+        int tempoGasto = carro.nextInt();
+        System.out.println("Informe o gasto de combustivel");
+        int quantidadeGasolina = carro.nextInt();
+        int consumoCombustivel;
+        int velocidadeMedia;
+
+        velocidadeMedia = distancia/tempoGasto;
+        consumoCombustivel = distancia/quantidadeGasolina;
+
+        System.out.println(velocidadeMedia + "Km/h");
+        System.out.println(consumoCombustivel + "Km/L");
+
+    }
+}
+
+
+7.
+
+import java.util.*;
+
+public class Exc7 {
+    public static void main(String[] args) {
+        Scanner numeros = new Scanner(System.in);
+        System.out.println("Informe um número");
+        int n = numeros.nextInt();
+        int resultado;
+
+        resultado = n%2;
+
+        if (resultado == 0) {
+            System.out.println("O número é par");
+        } else {
+            System.out.println("O número é impar");
+        }
+
+    }
+}
+
+
+8.
+
+import java.util.*;
+
+public class Exc8 {
+    public static void main(String[] args) {
+        Scanner energia = new Scanner(System.in);
+        System.out.println("Informe o gasto da casa");
+        int kwatts = energia.nextInt();
+        System.out.println("Informe o valor do kw");
+        float valorKwatts = energia.nextFloat();
+        float valorPago;
+
+        valorPago = kwatts*valorKwatts;
+
+        if (valorPago < 150) {
+            valorPago = (float) (valorPago*0.9); 
+        }else {
+            System.out.println(valorPago);
+        }
+
+        System.out.println(valorPago);
+    }
+
+}
+
+9.
+
+import java.util.*;
+
+public class Exc9 {
+    public static void main(String[] args) {
+        Scanner num = new Scanner(System.in);
+        System.out.println("Informe um número");
+        float x = num.nextFloat();
+        float arredondando, decimal;
+
+        decimal = x - ((int)x);
+        if (decimal >= 0.5) {
+            arredondando = x + 1 - decimal;
+        } else{
+            arredondando = x - decimal;
+        }
+
+        System.out.println(arredondando);
+    }
+}
+
+10.
+
+import java.util.*;
+
+public class Exc10 {
+    public static void main(String[] args) {
+        Scanner num = new Scanner(System.in);
+        System.out.println("Informe um número");
+        int numero = num.nextInt();
+        System.out.println("Informe o inicio do intervalo");
+        int antecessor = num.nextInt();
+        System.out.println("Informe o fim do intervalo");
+        int sucessor = num.nextInt();
+        
+        
+        if (numero > antecessor && numero < sucessor) {
+            System.out.println("O número está no intervalo");
+        } else if (numero > sucessor) {
+            System.out.println("O número está depois do intervalo");
+        } else {
+            System.out.println("O número está antes do intervalo");
+        }
+        
+    }
+}
+
+11.
+
+import java.util.*;
+
+public class Exc11 {
+    public static void main(String[] args) {
+        Scanner caracteres = new Scanner(System.in);
+        System.out.println("Informe o primeiro número");
+        Float a = caracteres.nextFloat();
+        System.out.println("Informe o segundo número");
+        float b = caracteres.nextFloat();
+        System.out.println("Informe a operação");
+        String operacao = caracteres.next();
+
+        switch (operacao) {
+            case "/": System.out.println(a/b);
+                break;
+            case "*": System.out.println(a*b);
+                break;
+            case "-": System.out.println(a-b);
+                break;
+            case "+": System.out.println(a+b);
+                break;
+
+            default: System.out.println("Escreva um operador válido");
+                break;
+        }
+
+    }
+}
+
+12.
+
+import java.util.*;
+
+public class Exc12 {
+    public static void main(String[] args) {
+        Scanner numeros = new Scanner(System.in);
+        System.out.println("Informe o primeiro número");
+        int a = numeros.nextInt();
+        System.out.println("Informe o segundo número");
+        int b = numeros.nextInt();
+        int soma;
+        
+        if (a < b) {   
+            for (int i = a; i < b; i++) {
+                soma = i++;
+                System.out.println(soma);
+            }
+        } else {
+            for (int i = a; i > b; i--) {
+                soma = i--;
+                System.out.println(soma);
+            }
+        }
+    }
+}
+
+
+13.
+
+import java.util.*;
+
+public class Exc13 {
+    public static void main(String[] args) {
+        Scanner numeros = new Scanner(System.in);
+        System.out.println("Informe o número de alunos");
+        int n = numeros.nextInt();
+        System.out.println("Informe as notas do alunos");
+        float soma = 0;
+        float media = 0;
+        float nota;
+
+
+
+        for (int i = 0; i < n; i++){
+            nota = numeros.nextFloat();
+            soma += nota;
+        }
+
+        media = soma / n;
+        System.out.println(media);
+
+    }
+        
+    
+}
+
+14.
+
+import java.util.*;
+/*Ler notas de alunos até que o usuário digite -1. Ao final imprimir a
+quantidade de alunos, a média da turma, a maior nota e a menor
+nota */
+public class Exc14 {
+    public static void main(String[] args) {
+        Scanner numeros = new Scanner(System.in);
+        System.out.println("Informe as notas do alunos");
+        float soma = 0;
+        float media = 0;
+        int qtdA = 0;
+        float maior = 0;
+        float menor = 10;
+
+        while (media == 0) {
+            float temp = numeros.nextFloat();
+            if (temp == -1) {
+                break;
+            }
+            if (temp > maior) {
+                maior = temp;
+            }
+            if (temp < menor) {
+                menor = temp;
+            }
+            soma += temp;
+            qtdA = qtdA + 1;
+        }
+        
+        media = soma / qtdA;
+        System.out.println(media);
+        System.out.println(maior);
+        System.out.println(menor);
+    }    
+}
+
+
+15.
+
+
+import java.util.*;
+
+public class Exc15 {
+    public static void main(String[] args) {
+        Scanner numeros = new Scanner(System.in);
+        System.out.println("Informe os caracteres");
+        char caracteres = ' ';
+        int vogais = 0;
+        int digitos = 0;
+        int outros = 0;
+
+        while (caracteres != '.') {
+            caracteres = numeros.next().charAt(0);
+            if (caracteres == '.') {
+                break;
+            }else if (caracteres == '0' || caracteres == '1' || caracteres == '2' || caracteres == '3' || caracteres == '4' || caracteres == '5' || caracteres == '6' || caracteres == '7' || caracteres == '8' || caracteres == '9') {
+                digitos++;
+            }else if (caracteres == 'a' || caracteres == 'e' || caracteres == 'i' || caracteres == 'o' || caracteres == 'u' || caracteres == 'A' || caracteres == 'E' || caracteres == 'I' || caracteres == 'O' || caracteres == 'U') {
+                vogais++;  
+            }else {
+               outros++;
+            }
+        }
+        System.out.println("Quantidade de vogais: " + vogais);
+        System.out.println("Quantidade de digitos: " + digitos);
+        System.out.println("Quantidade de outros caracteres: " + outros);
+    }
+}
+
