@@ -7,19 +7,29 @@ public class Exc14 {
         Scanner numeros = new Scanner(System.in);
         System.out.println("Informe as notas do alunos");
         float soma = 0;
+        float media = 0;
         int qtdA = 0;
+        float maior = 0;
+        float menor = 10;
 
-        while (true) {
+        while (media == 0) {
             float temp = numeros.nextFloat();
             if (temp == -1) {
                 break;
             }
+            if (temp > maior) {
+                maior = temp;
+            }
+            if (temp < menor) {
+                menor = temp;
+            }
             soma += temp;
             qtdA = qtdA + 1;
         }
-
-        float media = soma / qtdA;
+        
+        media = soma / qtdA;
         System.out.println(media);
-
+        System.out.println(maior);
+        System.out.println(menor);
     }    
 }
