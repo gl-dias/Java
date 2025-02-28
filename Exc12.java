@@ -7,18 +7,27 @@ public class Exc12 {
         int a = numeros.nextInt();
         System.out.println("Informe o segundo número");
         int b = numeros.nextInt();
-        int soma;
+        int soma = 0;
+        int pares = 0;
         
-        if (a < b) {   
-            for (int i = a; i < b; i++) {
-                soma = i++;
-                System.out.println(soma);
+        if (a < b) {
+            for (int i = a; i <= b; i++) {
+                if (i % 2 == 0) {
+                    soma += i;
+                    pares++;
+                    System.out.println(i);
+                }
             }
         } else {
-            for (int i = a; i > b; i--) {
-                soma = i--;
-                System.out.println(soma);
-            }
+            for (int i = b; i <= a; i++) {
+                if (i % 2 == 0) {
+                    soma += i;
+                    pares++;
+                    System.out.println(i);
+                }
+                }
         }
+        System.out.println("Soma dos números no intervalo: " + soma);
+        System.out.println("Média dos números no intervalo: " + (soma / pares));
     }
 }
