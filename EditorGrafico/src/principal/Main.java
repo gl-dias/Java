@@ -1,5 +1,6 @@
 package principal;
 
+import formas.Circulo;
 import formas.Retangulo;
 
 import java.util.Scanner;
@@ -13,6 +14,7 @@ public class Main {
        int y = teclado.nextInt();
        int altura = teclado.nextInt();
        int largura = teclado.nextInt();
+       float raio = teclado.nextFloat();
 
        Retangulo retangulo = new Retangulo(x, y, altura, largura);
        System.out.println(retangulo);
@@ -30,5 +32,22 @@ public class Main {
        retangulo.dividir(2, 2);
 
        retangulo.desenhar();
+
+       Circulo circulo = new Circulo(x, y, raio);
+       System.out.println(circulo);
+
+       circulo.desenhar();
+
+       circulo.mover(4,5);
+
+       circulo.desenhar();
+
+       circulo.redimensionar(100);
+
+       circulo.desenhar();
+
+       circulo.dividir(2);
+
+       circulo.desenhar();
     }
 }
