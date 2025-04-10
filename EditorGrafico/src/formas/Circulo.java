@@ -1,19 +1,12 @@
 package formas;
 
 public class Circulo {
-    private int x, y;
+    private Ponto ponto;
     private float raio;
 
     public Circulo(int x, int y, float raio) {
-        this.x = x;
-        this.y = y;
+        this.ponto = new Ponto(x, y);
         this.raio = raio;
-    }
-
-    public Circulo(Circulo outroCirculo) {
-        this.x = outroCirculo.x;
-        this.y = outroCirculo.y;
-        this.raio = outroCirculo.raio;
     }
 
     public void setRaio(float raio) {
@@ -24,30 +17,13 @@ public class Circulo {
         return raio;
     }
 
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public int getX() {
-        return x;
-    }
-
-    public void setY(int y) {
-        this.y = y;
-    }
-
-    public int getY() {
-        return y;
-    }
-
     public void mover(int x, int y) {
-        this.x = x;
-        this.y = y;
+        ponto.mover(x, y);
     }
 
     public void desenhar() {
         System.out.printf("Circulo(%d, %d, %f)\n",
-                x, y, raio);
+                ponto.getX(), ponto.getY(), raio);
     }
 
     public void redimensionar(float sx) {

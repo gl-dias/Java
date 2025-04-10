@@ -1,32 +1,29 @@
 package formas;
 
 public class Retangulo {
-    private int x;
-    private int y;
+    private Ponto ponto;
     private int largura;
     private int altura;
 
     public Retangulo(int x, int y, int largura, int altura) {
-        this.x = x;
-        this.y = y;
+        this.ponto = new Ponto(x, y);
         this.largura = largura;
         this.altura = altura;
     }
 
     public Retangulo(int x, int y, int lado) {
-        this.x = x;
-        this.y = y;
+        this.ponto = new Ponto(x, y);
         this.largura = lado;
         this.altura = lado;
     }
 
     public void mover(int x, int y) {
-        this.x = x;
-        this.y = y;
+        ponto.mover(x, y);
     }
+
     public void desenhar() {
         System.out.printf("Retangulo(%d, %d, %d, %d)\n",
-                x, y, largura, altura);
+                ponto.getX(), ponto.getY(), largura, altura);
     }
     public void redimensionar(float sx, float sy) {
         if (sx > 0 && sy > 0) {
